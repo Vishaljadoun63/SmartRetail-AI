@@ -1,0 +1,37 @@
+# Python virtual environments
+.venv/
+venv/
+backend/venv/
+
+# Python cache
+__pycache__/
+backend/__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Environment
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Build
+dist/
+build/
+
+# ML Models (optional)
+*.h5
+*.keras
+*.pt
+*.pth
+*.joblib
+
+# OS
+.DS_Store
+Thumbs.db

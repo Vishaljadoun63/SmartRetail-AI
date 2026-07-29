@@ -1,0 +1,79 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hello",
+        "hi",
+        "hey",
+        "good morning",
+        "good evening"
+      ],
+      "responses": [
+        "Hello! Welcome to SmartRetail AI. How can I help you today?",
+        "Hi! How may I assist you today?"
+      ]
+    },
+    {
+      "tag": "products",
+      "patterns": [
+        "show products",
+        "product",
+        "products",
+        "classify product",
+        "product classifier"
+      ],
+      "responses": [
+        "You can use the Product Classification page to classify retail products."
+      ]
+    },
+    {
+      "tag": "sentiment",
+      "patterns": [
+        "review",
+        "reviews",
+        "sentiment",
+        "customer review",
+        "analyze review"
+      ],
+      "responses": [
+        "You can analyze customer reviews using the Sentiment Analysis page."
+      ]
+    },
+    {
+      "tag": "analytics",
+      "patterns": [
+        "analytics",
+        "dashboard",
+        "statistics",
+        "report"
+      ],
+      "responses": [
+        "The Analytics dashboard provides insights into customers, products and reviews."
+      ]
+    },
+    {
+      "tag": "face",
+      "patterns": [
+        "face",
+        "face recognition",
+        "register face",
+        "customer recognition"
+      ],
+      "responses": [
+        "Face Recognition is currently disabled on this system."
+      ]
+    },
+    {
+      "tag": "bye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you"
+      ],
+      "responses": [
+        "Goodbye! Have a great day."
+      ]
+    }
+  ]
+}
