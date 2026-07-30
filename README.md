@@ -1,79 +1,245 @@
-# AI-Powered Smart Retail & Customer Intelligence Platform
+# 🛍️ SmartRetail AI – AI-Powered Retail Intelligence Platform
 
-Welcome to the **Smart Retail AI** capstone project. This platform integrates cutting-edge Machine Learning and Web Technologies to provide retail businesses with automated customer insights, face recognition, product classification, sentiment analysis, and conversational AI support.
+SmartRetail AI is a full-stack AI-powered retail management platform that helps businesses analyze customer behavior, automate product recognition, understand customer sentiment, and gain actionable insights through an interactive analytics dashboard.
 
-## 🚀 Features
+Designed as a B.Tech Capstone Project, the platform combines Computer Vision, Natural Language Processing, Machine Learning, and Modern Web Technologies to create a complete retail intelligence solution.
 
-1.  **Face Recognition Authentication**: Automatically identify returning customers as they walk in via webcam. 
-2.  **Product Classification**: Upload product images to classify them using a pre-trained MobileNetV2 architecture.
-3.  **Sentiment Analysis**: Analyze the sentiment of customer reviews (Positive/Negative/Neutral) using NLP.
-4.  **AI FAQ Chatbot**: A hybrid rule-based/ML chatbot to automatically answer customer queries.
-5.  **Analytics Dashboard**: Visual dashboard for admins using Chart.js, summarizing total visits, sentiments, and interactions.
+---
 
-## 🛠️ Technology Stack
+# 🚀 Features
 
-- **Frontend**: React.js (Vite), Tailwind CSS (Glassmorphism UI), Framer Motion, Axios, React Router, Chart.js
-- **Backend**: FastAPI (Python 3.12), Pydantic, Uvicorn, JWT Auth
-- **Database**: MongoDB (Motor Asyncio)
-- **Machine Learning**: TensorFlow/Keras, `face_recognition` (dlib), Scikit-Learn, OpenCV
-- **Deployment**: Docker, Docker Compose
+### 📊 Analytics Dashboard
+- Interactive business dashboard
+- Customer statistics
+- Sentiment overview
+- Store performance insights
+- Activity summaries
 
-## 📦 Project Structure
+### 👥 Customer Management
+- View and manage customer records
+- Track returning customers
+- Customer visit history
+
+### ⭐ Review Management
+- View customer reviews
+- Analyze feedback
+- Manage review database
+
+### 😊 Sentiment Analysis
+- AI-powered sentiment prediction
+- Positive / Neutral / Negative classification
+- NLP-based review analysis
+
+### 🛒 Product Classification
+- Upload product images
+- AI classifies products using a Hugging Face Vision Transformer (ViT)
+- Fast image inference
+
+### 🤖 SmartRetail AI Assistant
+- Interactive AI chatbot
+- Answers retail-related queries
+- Provides analytics assistance
+- Business insights and recommendations
+
+### 👤 Face Recognition
+- Detect and recognize returning customers
+- Customer authentication using computer vision
+
+### 🔐 Secure Authentication
+- JWT Authentication
+- Protected dashboard
+- Secure login system
+
+---
+
+# 🛠 Technology Stack
+
+## Frontend
+- React.js (Vite)
+- Tailwind CSS
+- Framer Motion
+- Axios
+- React Router DOM
+- Chart.js
+- Lucide React
+
+## Backend
+- FastAPI
+- Python
+- Uvicorn
+- Pydantic
+- JWT Authentication
+
+## Database
+- MongoDB
+
+## Artificial Intelligence
+- Hugging Face Transformers
+- Vision Transformer (ViT)
+- Scikit-learn
+- OpenCV
+- face_recognition (dlib)
+- Natural Language Processing
+
+## Deployment
+- Docker
+- Docker Compose
+
+---
+
+# 📂 Project Structure
 
 ```
 smart-retail-ai/
-├── backend/            # FastAPI application and APIs
-│   ├── api/            # API routers (auth, ml_services, dashboard)
-│   ├── core/           # Security, Config, JWT
-│   ├── database/       # MongoDB connection
-│   ├── ml_models/      # Inference logic and saved models (.pkl, .h5)
-│   ├── schemas/        # Pydantic data validation
-│   └── main.py         # Entry point
-├── frontend/           # React frontend (Vite)
+│
+├── backend/
+│   ├── api/
+│   ├── core/
+│   ├── database/
+│   ├── ml_models/
+│   ├── schemas/
+│   ├── tests/
+│   └── main.py
+│
+├── frontend/
 │   ├── src/
-│   │   ├── components/ # Reusable UI (Sidebar, Layout)
-│   │   ├── pages/      # All route components (Login, Dashboard, ML pages)
-│   │   └── services/   # Axios configuration
-│   └── index.css       # Tailwind & Glassmorphism styles
-├── ml_training/        # Scripts to train and generate initial ML models
-└── docker-compose.yml  # Container orchestration
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+│
+├── ml_training/
+│
+├── docker-compose.yml
+│
+└── README.md
 ```
 
-## ⚙️ Initial Setup & ML Model Generation
+---
 
-Because this repository contains ML features, you must first generate the dummy/initial models before starting the backend, or they will be missing during API initialization.
+# ⚙️ Installation
 
-1.  Navigate to `ml_training/`.
-2.  Ensure you have python dependencies installed locally (`pip install -r ../backend/requirements.txt`).
-3.  Run the training scripts:
-    ```bash
-    python train_sentiment.py
-    python train_chatbot.py
-    python train_product_classifier.py
-    ```
-4.  This will populate the `backend/ml_models` folder with the required `.pkl` and `.h5` files.
+## Clone Repository
 
-## 🐳 Running with Docker (Recommended)
+```bash
+git clone https://github.com/YOUR_USERNAME/SmartRetail-AI.git
 
-1. Ensure Docker and Docker Compose are installed.
-2. At the root of the project (`smart-retail-ai`), run:
-   ```bash
-   docker-compose up --build
-   ```
-3. The platform is now live!
-   - **Frontend**: http://localhost:3000
-   - **Backend API**: http://localhost:8000
-   - **API Docs (Swagger)**: http://localhost:8000/api/v1/openapi.json
+cd SmartRetail-AI
+```
 
-## 🎨 UI Design
+---
 
-The frontend utilizes a modern **Glassmorphism** and dark-mode aesthetic with ambient background gradients, implemented cleanly via Tailwind CSS. Micro-animations are powered by `framer-motion` for a premium user experience.
+## Backend
 
-## 🔒 Security
+```bash
+cd backend
 
-- All API routes (except login) require JWT authentication.
-- Passwords are hashed using bcrypt (`passlib`).
-- MongoDB interactions use async I/O to ensure non-blocking, high-performance database querying.
+python -m venv venv
 
-## 📝 Authors
-Generated as a complete B.Tech Capstone Project.
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+uvicorn main:app --reload
+```
+
+Backend runs on:
+
+```
+http://localhost:8000
+```
+
+---
+
+## Frontend
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+Frontend runs on:
+
+```
+http://localhost:3000
+```
+
+---
+
+# 🐳 Docker
+
+```bash
+docker-compose up --build
+```
+
+---
+
+# 🎨 User Interface
+
+The application features a modern glassmorphism-inspired interface with:
+
+- Responsive Landing Page
+- Interactive Dashboard
+- AI Dashboard Preview
+- Animated Components
+- Modern Dark Theme
+- Smooth Navigation
+- Interactive Charts
+- Professional SaaS-style Design
+
+---
+
+# 🔒 Security
+
+- JWT Authentication
+- Password Hashing
+- Protected Routes
+- MongoDB Secure Access
+- Async FastAPI APIs
+
+---
+
+# 📸 Screenshots
+
+> Add screenshots here after deployment.
+
+- Landing Page
+- Login Page
+- Analytics Dashboard
+- Customer Management
+- Sentiment Analysis
+- Product Classification
+- AI Chatbot
+
+---
+
+# 🔮 Future Improvements
+
+- Real-time Analytics
+- Sales Forecasting
+- Inventory Prediction
+- Recommendation System
+- Multi-store Management
+- Cloud Deployment (AWS/Azure)
+- Mobile Application
+
+---
+
+# 👨‍💻 Author
+
+**Vishal Jadoun**
+
+B.Tech Electronics & Communication Engineering
+
+VIT Bhopal University
+
+---
+
+# ⭐ If you like this project
+
+Please consider giving the repository a ⭐ on GitHub.
