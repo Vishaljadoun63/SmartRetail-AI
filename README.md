@@ -2,7 +2,7 @@
 
 SmartRetail AI is a full-stack AI-powered retail management platform that helps businesses analyze customer behavior, automate product recognition, understand customer sentiment, and gain actionable insights through an interactive analytics dashboard.
 
-Designed as a B.Tech Capstone Project, the platform combines Computer Vision, Natural Language Processing, Machine Learning, and Modern Web Technologies to create a complete retail intelligence solution.
+The platform combines Computer Vision, Natural Language Processing, Machine Learning, and Modern Web Technologies to create a complete retail intelligence solution.
 
 ---
 
@@ -80,10 +80,6 @@ Designed as a B.Tech Capstone Project, the platform combines Computer Vision, Na
 - OpenCV
 - face_recognition (dlib)
 - Natural Language Processing
-
-## Deployment
-- Docker
-- Docker Compose
 
 ---
 
@@ -176,45 +172,6 @@ http://localhost:3000
 ```bash
 docker-compose up --build
 ```
-
----
-
-# 🎨 User Interface
-
-The application features a modern glassmorphism-inspired interface with:
-
-- Responsive Landing Page
-- Interactive Dashboard
-- AI Dashboard Preview
-- Animated Components
-- Modern Dark Theme
-- Smooth Navigation
-- Interactive Charts
-- Professional SaaS-style Design
-
----
-
-# 🔒 Security
-
-- JWT Authentication
-- Password Hashing
-- Protected Routes
-- MongoDB Secure Access
-- Async FastAPI APIs
-
----
-
-# 📸 Screenshots
-
-> Add screenshots here after deployment.
-
-- Landing Page
-- Login Page
-- Analytics Dashboard
-- Customer Management
-- Sentiment Analysis
-- Product Classification
-- AI Chatbot
 
 ---
 
