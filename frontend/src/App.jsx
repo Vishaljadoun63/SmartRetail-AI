@@ -273,13 +273,26 @@ const Landing = () => {
 
       {/* Footer */}
 
-      <footer
-        id="footer"
-        className="border-t border-white/10 py-6 text-center text-gray-500"
-      >
+      <footer className="border-t border-slate-700 py-8 text-center">
+        <p className="text-gray-400">
+          © 2026 SmartRetail AI • Vishal Jadoun
+        </p>
 
-        © 2026 SmartRetail AI • Built with React • FastAPI • TensorFlow • MongoDB
+        <p className="mt-2 text-sm text-gray-500">
+          Built with React • FastAPI • Hugging Face • MongoDB
+        </p>
 
+        <p className="mt-3 text-sm text-gray-400">
+          Designed & Developed by{" "}
+          <a
+            href="https://vishal-jadoun-portfolio.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-blue-400 hover:text-blue-300 transition-colors duration-300"
+          >
+            Vishal Jadoun
+          </a>
+        </p>
       </footer>
 
     </div>
