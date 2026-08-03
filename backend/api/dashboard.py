@@ -30,9 +30,9 @@ async def get_analytics():
     returning_customers = await customers_col.count_documents({"visit_count": {"$gt": 1}})
     new_customers = total_customers - returning_customers
 
-    pos = await reviews_col.count_documents({"sentiment": "positive"})
-    neg = await reviews_col.count_documents({"sentiment": "negative"})
-    neu = await reviews_col.count_documents({"sentiment": "neutral"})
+    pos = await reviews_col.count_documents({"sentiment": "Positive"})
+    neg = await reviews_col.count_documents({"sentiment": "Negative"})
+    neu = await reviews_col.count_documents({"sentiment": "Neutral"})
 
     total_chats = await chat_col.count_documents({})
     products_col = get_collection("product_logs")
@@ -175,9 +175,9 @@ async def download_report():
     products = await products_col.count_documents({})
     chats = await chat_col.count_documents({})
 
-    positive = await reviews_col.count_documents({"sentiment": "positive"})
-    negative = await reviews_col.count_documents({"sentiment": "negative"})
-    neutral = await reviews_col.count_documents({"sentiment": "neutral"})
+    positive = await reviews_col.count_documents({"sentiment": "Positive"})
+    negative = await reviews_col.count_documents({"sentiment": "Negative"})
+    neutral = await reviews_col.count_documents({"sentiment": "Neutral"})
 
     from datetime import timedelta
 
