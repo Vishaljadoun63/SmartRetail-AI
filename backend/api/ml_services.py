@@ -119,12 +119,14 @@ async def api_recognize_face(image: FaceImage):
                 "timestamp": datetime.now(),
                 "type": "returning"
             })
+
             
             # Update customer visit count
             await customers_col.update_one(
                 {"_id": matched_customer["_id"]},
                 {"$inc": {"visit_count": 1}, "$set": {"last_visit": datetime.now()}}
             )
+
             
             return {
                 "status": "returning_customer",

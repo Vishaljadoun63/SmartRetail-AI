@@ -17,7 +17,8 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 try:
     sentiment_model = pipeline(
         task="sentiment-analysis",
-        model="distilbert-base-uncased-finetuned-sst-2-english"
+        model="distilbert-base-uncased-finetuned-sst-2-english",
+        framework="pt"
     )
     print("Hugging Face sentiment model loaded successfully!")
 except Exception as e:
@@ -37,7 +38,8 @@ except Exception as e:
 try:
     image_classifier = pipeline(
         "image-classification",
-        model="google/vit-base-patch16-224"
+        model="google/vit-base-patch16-224",
+        framework="pt"
     )
     logger.info("Hugging Face image classifier loaded.")
 except Exception as e:
