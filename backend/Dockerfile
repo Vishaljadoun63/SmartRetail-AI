@@ -1,8 +1,8 @@
-FROM python:3.12-slim
+FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install system dependencies required for OpenCV and face_recognition
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
     cmake \
@@ -10,16 +10,17 @@ RUN apt-get update && apt-get install -y \
     liblapack-dev \
     libx11-dev \
     libgtk-3-dev \
-    libgl1-mesa-glx \
+    libgl1 \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
 
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
-
-# Download NLTK and SpaCy models if required by the scripts in production
-# RUN python -m nltk.downloader punkt stopwords wordnet
-# RUN python -m spacy download en_core_web_sm
 
 COPY . .
 

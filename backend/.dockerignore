@@ -1,5 +1,16 @@
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
 .env
+.git
+.gitignore
+
 venv/
+.venv/
+
 .pytest_cache/
+.vscode/
+
+*.log
