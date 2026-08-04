@@ -35,3 +35,10 @@ app.include_router(dashboard.router, prefix=f"{settings.API_V1_STR}/dashboard", 
 @app.get("/")
 def read_root():
     return {"message": f"Welcome to {settings.PROJECT_NAME}"}
+
+@app.get("/health")
+async def health_check():
+    return {
+        "status": "healthy",
+        "message": "Backend is running"
+    }
